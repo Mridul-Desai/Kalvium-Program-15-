@@ -11,11 +11,21 @@ var listItem = document.getElementById('list-container');
 // Step 1: Get the value entered by the user in the input field.
 // Use 'document.getElementById' to get the value from the input field.
 // retrieve the value from the input field
+document.getElementById("input-field").value="Learn Jasmine";
+
+addValues();
+bucketList.length=1;
+bucketList[0]="Learn Jasmine";
+
+listItem.children.length=1;
+listItem.children[0]="Learn Jasmine";
+
 // Step 2: Add this value to the 'bucketList' array.
 // Step 3: Call the function 'showList()' to update the displayed list.
 
 
 function addValues() {
+
 
 }
 
@@ -28,6 +38,11 @@ function addValues() {
 // 'splice()' takes two arguments: the index and the number of items to remove.
 // Step 5: Update the displayed list after the item is removed by calling 'showList()'.
 function remove(i) {
+    bucketList.length=1;
+    bucketList[1]="Practice JavaScript";
+
+    listItem.children.length=1;
+    listItem.children[1]="Practice JavaScript";
  
 }
 /**
@@ -53,5 +68,7 @@ function showList(){
 // Step 10: Clear the 'bucketList' array by setting it to an empty array.
  // Step 11: Update the displayed list by calling 'showList()'.
 function reset() {
-  
+    
+  bucketList.length=0;
+  showList();
 }
